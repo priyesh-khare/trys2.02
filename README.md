@@ -1,1 +1,2 @@
-# trys2.02
+npm install
+npm run dev
