@@ -23,14 +23,14 @@ const rnd = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
 const pick = (arr) => arr[rnd(0, arr.length - 1)];
 const pickN = (arr, n) => { const s = [...arr]; const out = []; for (let i = 0; i < n && s.length; i++) out.push(s.splice(rnd(0, s.length - 1), 1)[0]); return out; };
 
-const industries = ["Technology", "Healthcare", "Restaurants", "Fashion", "Retail", "Education", "Real Estate", "Construction", "Agriculture", "Manufacturing", "Finance", "Gaming", "Artificial Intelligence", "Media", "Transportation", "Energy"];
+const industries = ["Technology", "Healthcare", "Restaurants", "Fashion", "Retail", "Education", "Real Estate", "Construction", "Agriculture", "Manufacturing", "Finance", "Gaming", "Artificial Intelli[...]
 const countries = ["India", "United States", "United Kingdom", "Germany", "Singapore", "Canada", "Kenya", "Brazil", "Japan", "Australia", "Portugal", "Netherlands", "UAE", "South Korea", "Mexico"];
-const nounsA = ["Arc", "Nimbus", "Verdant", "Solace", "Orbit", "Lumen", "Cobalt", "Fable", "Quartz", "Halcyon", "Meridian", "Aster", "Ember", "Tidal", "Vector", "Grove", "Pulse", "Cinder", "Beacon", "Marrow", "Fenwick", "Thistle", "Harbor", "Ridge", "Amber", "Cypress", "Delta", "Echo", "Frost", "Granite", "Ivory", "Juniper", "Kestrel", "Lantern", "Maple", "Nomad", "Onyx", "Pinnacle", "Quill", "Raven", "Sable", "Terra", "Umbra", "Vesper", "Willow", "Zephyr", "Anchor", "Birch", "Coral", "Drift"];
-const suffixes = ["Labs", "Robotics", "Farms", "Wearables", "Foods", "Studio", "Works", "Collective", "Systems", "Health", "Dynamics", "Analytics", "Ventures", "Craft", "Motors", "Energy", "Media", "Networks", "Foundry", "Group"];
-const firstNames = ["Maya", "Leo", "Priya", "Noah", "Elena", "Kwame", "Sofia", "Ravi", "Grace", "Diego", "Amara", "Felix", "Yuki", "Omar", "Ines", "Theo", "Zara", "Lucas", "Nadia", "Sam", "Mei", "Jonas", "Layla", "Arjun", "Clara", "Kofi", "Ana", "Marcus", "Ling", "Ben"];
-const lastNames = ["Chen", "Okafor", "Patel", "Silva", "Kim", "Novak", "Reyes", "Larsen", "Haddad", "Boateng", "Rossi", "Nguyen", "Petrov", "Diallo", "Fischer", "Watanabe", "Costa", "Dubois", "Adeyemi", "Sorensen"];
-const skills = ["React", "Node.js", "Figma", "Python", "SQL", "Copywriting", "Sales", "Logistics", "TypeScript", "Product Strategy", "Data Viz", "Community Building", "Illustration", "Go", "Rust", "Marketing", "Finance Modeling", "UX Research", "DevOps", "Machine Learning"];
-const jobTitles = ["Product Designer", "Backend Engineer", "Growth Marketer", "Data Analyst", "Community Manager", "Sales Lead", "Frontend Engineer", "Operations Associate", "Customer Success Manager", "Content Strategist", "ML Engineer", "Supply Chain Analyst", "Finance Associate", "People Ops Partner", "Founding Engineer"];
+const nounsA = ["Arc", "Nimbus", "Verdant", "Solace", "Orbit", "Lumen", "Cobalt", "Fable", "Quartz", "Halcyon", "Meridian", "Aster", "Ember", "Tidal", "Vector", "Grove", "Pulse", "Cinder", "Beacon", "[...]
+const suffixes = ["Labs", "Robotics", "Farms", "Wearables", "Foods", "Studio", "Works", "Collective", "Systems", "Health", "Dynamics", "Analytics", "Ventures", "Craft", "Motors", "Energy", "Media", "N[...]
+const firstNames = ["Maya", "Leo", "Priya", "Noah", "Elena", "Kwame", "Sofia", "Ravi", "Grace", "Diego", "Amara", "Felix", "Yuki", "Omar", "Ines", "Theo", "Zara", "Lucas", "Nadia", "Sam", "Mei", "Jona[...]
+const lastNames = ["Chen", "Okafor", "Patel", "Silva", "Kim", "Novak", "Reyes", "Larsen", "Haddad", "Boateng", "Rossi", "Nguyen", "Petrov", "Diallo", "Fischer", "Watanabe", "Costa", "Dubois", "Adeyemi[...]
+const skills = ["React", "Node.js", "Figma", "Python", "SQL", "Copywriting", "Sales", "Logistics", "TypeScript", "Product Strategy", "Data Viz", "Community Building", "Illustration", "Go", "Rust", "Ma[...]
+const jobTitles = ["Product Designer", "Backend Engineer", "Growth Marketer", "Data Analyst", "Community Manager", "Sales Lead", "Frontend Engineer", "Operations Associate", "Customer Success Manager"[...]
 const jobTypes = ["Full-time", "Internship", "Freelance", "Contract", "Part-time", "Remote"];
 const cities = ["Bengaluru", "Mumbai", "Pune", "Hyderabad", "Delhi NCR", "Chennai", "Austin", "Berlin", "Toronto", "Lisbon", "Singapore", "Dubai"];
 const rupee = (n) => "₹" + Math.round(n).toLocaleString("en-IN");
@@ -119,7 +119,7 @@ const GlobalStyle = () => (
 
 /* --------------------------------- ATOMS ----------------------------------- */
 const Avatar = ({ label, color, size = 38, radius = 12 }) => (
-  <div style={{ width: size, height: size, borderRadius: radius, background: `${color}22`, border: `1px solid ${color}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: size * 0.32, fontWeight: 600, color, flexShrink: 0 }}>{label}</div>
+  <div style={{ width: size, height: size, borderRadius: radius, background: `${color}22`, border: `1px solid ${color}55`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: si[...]
 );
 
 const Logo = ({ size = 26, color = "currentColor" }) => (
@@ -147,7 +147,7 @@ export default function TrysApp() {
   const [thread, setThread] = useState({ open: false, i: 0 });
 
   const Badge = ({ children, tone }) => (
-    <span style={{ fontSize: 10.5, fontWeight: 600, padding: "3px 9px", borderRadius: 20, background: tone ? `${tone}1E` : c.surface2, color: tone || c.sub, border: `1px solid ${tone ? tone + "44" : c.border}`, display: "inline-flex", alignItems: "center", gap: 4, whiteSpace: "nowrap" }}>{children}</span>
+    <span style={{ fontSize: 10.5, fontWeight: 600, padding: "3px 9px", borderRadius: 20, background: tone ? `${tone}1E` : c.surface2, color: tone || c.sub, border: `1px solid ${tone ? tone + "44" : c[...]
   );
 
   const AnimatedBar = ({ pct, h = 6, color = violet }) => {
@@ -167,7 +167,7 @@ export default function TrysApp() {
     return (
       <svg width={size} height={size}>
         <circle cx={size / 2} cy={size / 2} r={r} stroke={c.border} strokeWidth="4" fill="none" />
-        <circle className="ring-fill" cx={size / 2} cy={size / 2} r={r} stroke={teal} strokeWidth="4" fill="none" strokeDasharray={circ} strokeDashoffset={off} strokeLinecap="round" transform={`rotate(-90 ${size / 2} ${size / 2})`} />
+        <circle className="ring-fill" cx={size / 2} cy={size / 2} r={r} stroke={teal} strokeWidth="4" fill="none" strokeDasharray={circ} strokeDashoffset={off} strokeLinecap="round" transform={`rotate[...]
         <text x="50%" y="50%" textAnchor="middle" dy="0.32em" fontSize={size * 0.28} fontWeight="600" fill={c.text}>{score}</text>
       </svg>
     );
@@ -212,7 +212,7 @@ export default function TrysApp() {
   );
 
   const JobRow = (j, i = 0) => (
-    <div key={j.id} className="pressable stagger-item" style={{ ...glass, padding: "13px 14px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", animationDelay: `${i * 30}ms` }} onClick={() => setSelJob(j)}>
+    <div key={j.id} className="pressable stagger-item" style={{ ...glass, padding: "13px 14px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", animationDelay: `${i * 30}ms` }} onCl[...]
       <Avatar label={j.title.slice(0, 2)} color={violet} size={36} />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontWeight: 600, fontSize: 13, color: c.text }}>{j.title}</div>
@@ -226,7 +226,7 @@ export default function TrysApp() {
   );
 
   const ProRow = (p, i = 0) => (
-    <div key={p.id} className="pressable stagger-item" style={{ ...glass, padding: 14, display: "flex", gap: 12, alignItems: "center", cursor: "pointer", animationDelay: `${i * 30}ms` }} onClick={() => setSelPro(p)}>
+    <div key={p.id} className="pressable stagger-item" style={{ ...glass, padding: 14, display: "flex", gap: 12, alignItems: "center", cursor: "pointer", animationDelay: `${i * 30}ms` }} onClick={() =[...]
       <Avatar label={p.initials} color={p.color} size={38} radius={50} />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontWeight: 600, fontSize: 13, color: c.text }}>{p.name}</div>
@@ -239,7 +239,7 @@ export default function TrysApp() {
   const SearchBar = ({ placeholder }) => (
     <div style={{ ...glass, display: "flex", alignItems: "center", gap: 8, padding: "10px 14px", margin: "12px 0" }}>
       <Search size={15} color={c.sub} />
-      <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={placeholder} style={{ background: "transparent", border: "none", outline: "none", color: c.text, fontSize: 13, width: "100%" }} />
+      <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={placeholder} style={{ background: "transparent", border: "none", outline: "none", color: c.text, fontSize: 13, width:[...]
     </div>
   );
 
@@ -266,12 +266,12 @@ export default function TrysApp() {
       </div>
 
       <div style={{ display: "flex", gap: 10 }}>
-        <div className="pressable" onClick={() => setView("fund")} style={{ flex: 1, borderRadius: 18, padding: 16, background: `linear-gradient(135deg,${violet}26,${violet}08)`, border: `1px solid ${violet}33`, cursor: "pointer" }}>
+        <div className="pressable" onClick={() => setView("fund")} style={{ flex: 1, borderRadius: 18, padding: 16, background: `linear-gradient(135deg,${violet}26,${violet}08)`, border: `1px solid ${[...]
           <TrendingUp size={18} color={violet} />
           <div style={{ fontSize: 13.5, fontWeight: 700, marginTop: 8, color: c.text }}>Crowdfunding</div>
           <div style={{ fontSize: 11, color: c.sub, marginTop: 2 }}>Back verified businesses</div>
         </div>
-        <div className="pressable" onClick={() => setView("work")} style={{ flex: 1, borderRadius: 18, padding: 16, background: `linear-gradient(135deg,${teal}26,${teal}08)`, border: `1px solid ${teal}33`, cursor: "pointer" }}>
+        <div className="pressable" onClick={() => setView("work")} style={{ flex: 1, borderRadius: 18, padding: 16, background: `linear-gradient(135deg,${teal}26,${teal}08)`, border: `1px solid ${teal[...]
           <Briefcase size={18} color={teal} />
           <div style={{ fontSize: 13.5, fontWeight: 700, marginTop: 8, color: c.text }}>Jobs & talent</div>
           <div style={{ fontSize: 11, color: c.sub, marginTop: 2 }}>Hire or get hired</div>
@@ -324,7 +324,7 @@ export default function TrysApp() {
       <h1 style={h1}>Jobs & talent</h1>
       <div style={{ display: "flex", gap: 8, margin: "14px 0" }}>
         {["jobs", "talent"].map(t => (
-          <div key={t} className="pressable" onClick={() => setWorkTab(t)} style={{ flex: 1, textAlign: "center", padding: "9px 0", borderRadius: 14, cursor: "pointer", background: workTab === t ? teal + "22" : c.surface, border: `1px solid ${workTab === t ? teal + "55" : c.border}`, color: workTab === t ? c.text : c.sub, fontSize: 12.5, fontWeight: 600 }}>
+          <div key={t} className="pressable" onClick={() => setWorkTab(t)} style={{ flex: 1, textAlign: "center", padding: "9px 0", borderRadius: 14, cursor: "pointer", background: workTab === t ? tea[...]
             {t === "jobs" ? "Open roles" : "Talent directory"}
           </div>
         ))}
@@ -404,7 +404,7 @@ export default function TrysApp() {
           <TrustRing score={b.trust} size={50} />
           <div style={{ fontSize: 11.5, color: c.sub, lineHeight: 1.6 }}>Documents verified<br />Fraud checks passed<br />Identity confirmed</div>
         </div>
-        <div className="pressable" onClick={() => setView("notifications")} style={{ ...glass, padding: 14, display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8, cursor: "pointer" }}>
+        <div className="pressable" onClick={() => setView("notifications")} style={{ ...glass, padding: 14, display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8, cur[...]
           <span style={{ fontSize: 13, fontWeight: 600, color: c.text, display: "flex", alignItems: "center", gap: 8 }}><Bell size={15} color={c.sub} /> Notifications</span>
           <ChevronRight size={15} color={c.sub} />
         </div>
@@ -425,33 +425,117 @@ export default function TrysApp() {
     ];
     return (
       <div style={page}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, paddingTop: 4 }}>
-          {thread.open && <ChevronLeft className="icon-btn" size={18} color={c.text} style={{ cursor: "pointer" }} onClick={() => setThread({ open: false, i: 0 })} />}
-          <h1 style={h1}>{thread.open ? convos[thread.i].name : "Messages"}</h1>
+        {/* Mobile-optimized header */}
+        <div style={{ 
+          display: "flex", 
+          alignItems: "center", 
+          gap: 8,
+          paddingTop: 4,
+          minHeight: 36,
+          overflow: "hidden"
+        }}>
+          {thread.open && (
+            <ChevronLeft 
+              className="icon-btn" 
+              size={16} 
+              color={c.text} 
+              style={{ cursor: "pointer", flexShrink: 0 }} 
+              onClick={() => setThread({ open: false, i: 0 })} 
+            />
+          )}
+          <h1 style={{
+            ...h1,
+            minWidth: 0,
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            margin: 0
+          }}>
+            {thread.open ? convos[thread.i].name : "Messages"}
+          </h1>
         </div>
+        
         {!thread.open ? (
           <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 14 }}>
             {convos.map((b, i) => (
-              <div key={b.id} className="pressable stagger-item" onClick={() => setThread({ open: true, i })} style={{ ...glass, padding: 12, display: "flex", gap: 10, alignItems: "center", cursor: "pointer", animationDelay: `${i * 30}ms` }}>
+              <div 
+                key={b.id} 
+                className="pressable stagger-item" 
+                onClick={() => setThread({ open: true, i })} 
+                style={{ 
+                  ...glass, 
+                  padding: 12, 
+                  display: "flex", 
+                  gap: 10, 
+                  alignItems: "center", 
+                  cursor: "pointer",
+                  minHeight: 56,
+                  animationDelay: `${i * 35}ms`
+                }}
+              >
                 <Avatar label={b.initials} color={b.color} size={36} />
                 <div style={{ minWidth: 0, flex: 1 }}>
-                  <div style={{ fontSize: 13, fontWeight: 600, color: c.text }}>{b.name}</div>
-                  <div style={{ fontSize: 11, color: c.sub, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>Next update dropping Friday…</div>
+                  <div style={{ 
+                    fontSize: 13, 
+                    fontWeight: 600, 
+                    color: c.text,
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis"
+                  }}>
+                    {b.name}
+                  </div>
+                  <div style={{ 
+                    fontSize: 11, 
+                    color: c.sub, 
+                    whiteSpace: "nowrap", 
+                    overflow: "hidden", 
+                    textOverflow: "ellipsis" 
+                  }}>
+                    Next update dropping Friday…
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <div style={{ marginTop: 16 }}>
+          <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 8 }}>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {bubbles.map((m, i) => (
-                <div key={i} className="stagger-item" style={{ alignSelf: m.me ? "flex-end" : "flex-start", background: m.me ? violet + "26" : c.surface2, border: `1px solid ${c.border}`, borderRadius: 14, padding: "9px 13px", maxWidth: "80%", fontSize: 12.5, color: c.text, animationDelay: `${i * 60}ms` }}>{m.text}</div>
+                <div 
+                  key={i} 
+                  className="stagger-item" 
+                  style={{ 
+                    alignSelf: m.me ? "flex-end" : "flex-start", 
+                    background: m.me ? violet + "26" : c.surface2, 
+                    border: `1px solid ${c.border}`, 
+                    borderRadius: 14,
+                    padding: "10px 12px",
+                    maxWidth: "85%",
+                    wordWrap: "break-word",
+                    fontSize: 13,
+                    color: c.text,
+                    animationDelay: `${i * 40}ms`
+                  }}
+                >
+                  {m.text}
+                </div>
               ))}
             </div>
-            <div style={{ display: "flex", gap: 8, marginTop: 16, alignItems: "center", ...glass, padding: 9 }}>
-              <Paperclip size={14} color={c.sub} />
-              <span style={{ flex: 1, fontSize: 12, color: c.muted }}>Write a message…</span>
-              <Send size={14} color={violet} />
+            <div style={{ 
+              display: "flex", 
+              gap: 8, 
+              marginTop: 16, 
+              alignItems: "center", 
+              ...glass, 
+              padding: 9,
+              borderRadius: 14
+            }}>
+              <Paperclip size={14} color={c.sub} style={{ flexShrink: 0 }} />
+              <span style={{ flex: 1, fontSize: 12, color: c.muted, minWidth: 0 }}>
+                Write a message…
+              </span>
+              <Send size={14} color={violet} style={{ flexShrink: 0 }} />
             </div>
           </div>
         )}
@@ -477,7 +561,7 @@ export default function TrysApp() {
   const BizDetail = ({ b }) => (
     <div className="sheet-enter" style={{ position: "absolute", inset: 0, background: c.bg, zIndex: 30, overflowY: "auto" }}>
       <div style={{ height: 120, background: `linear-gradient(135deg,${b.color}30,transparent)`, position: "relative" }}>
-        <div className="icon-btn" onClick={() => setSelBiz(null)} style={{ position: "absolute", top: 22, left: 16, width: 32, height: 32, borderRadius: 11, background: "rgba(0,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}><ChevronLeft size={17} color="#fff" /></div>
+        <div className="icon-btn" onClick={() => setSelBiz(null)} style={{ position: "absolute", top: 22, left: 16, width: 32, height: 32, borderRadius: 11, background: "rgba(0,0,0,0.35)", display: "f[...]
         <div style={{ position: "absolute", bottom: -24, left: 20 }}><Avatar label={b.initials} color={b.color} size={58} radius={16} /></div>
       </div>
       <div style={{ padding: "36px 18px 30px", maxWidth: 480, margin: "0 auto" }}>
@@ -507,7 +591,7 @@ export default function TrysApp() {
           <Sparkles size={14} color={violet} />
           <span style={{ fontSize: 11, color: c.sub }}>AI: consistent funding velocity, credible founders — informational only.</span>
         </div>
-        <button className="pressable" style={{ width: "100%", padding: 14, borderRadius: 15, border: "none", background: grad, color: "#0A0A0C", fontWeight: 700, fontSize: 13.5, cursor: "pointer" }}>Back this business</button>
+        <button className="pressable" style={{ width: "100%", padding: 14, borderRadius: 15, border: "none", background: grad, color: "#0A0A0C", fontWeight: 700, fontSize: 13.5, cursor: "pointer" }}>B[...]
       </div>
     </div>
   );
@@ -515,7 +599,7 @@ export default function TrysApp() {
   const ProDetail = ({ p }) => (
     <div className="sheet-enter" style={{ position: "absolute", inset: 0, background: c.bg, zIndex: 30, overflowY: "auto", padding: "22px 18px 30px" }}>
       <div style={{ maxWidth: 480, margin: "0 auto" }}>
-        <div className="icon-btn" onClick={() => setSelPro(null)} style={{ width: 32, height: 32, borderRadius: 11, background: c.surface2, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18, cursor: "pointer" }}><ChevronLeft size={17} color={c.text} /></div>
+        <div className="icon-btn" onClick={() => setSelPro(null)} style={{ width: 32, height: 32, borderRadius: 11, background: c.surface2, display: "flex", alignItems: "center", justifyContent: "cent[...]
         <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
           <Avatar label={p.initials} color={p.color} size={58} radius={50} />
           <div>
@@ -531,7 +615,7 @@ export default function TrysApp() {
         <div style={{ display: "flex", gap: 8, marginBottom: 18 }}>
           <Badge><Github size={10} /> github</Badge><Badge><Linkedin size={10} /> linkedin</Badge><Badge><Globe size={10} /> site</Badge>
         </div>
-        <button className="pressable" style={{ width: "100%", padding: 14, borderRadius: 15, border: "none", background: grad, color: "#0A0A0C", fontWeight: 700, fontSize: 13.5, cursor: "pointer" }}>Message {p.name.split(" ")[0]}</button>
+        <button className="pressable" style={{ width: "100%", padding: 14, borderRadius: 15, border: "none", background: grad, color: "#0A0A0C", fontWeight: 700, fontSize: 13.5, cursor: "pointer" }}>M[...]
       </div>
     </div>
   );
@@ -541,7 +625,7 @@ export default function TrysApp() {
     return (
       <div className="sheet-enter" style={{ position: "absolute", inset: 0, background: c.bg, zIndex: 30, overflowY: "auto", padding: "22px 18px 30px" }}>
         <div style={{ maxWidth: 480, margin: "0 auto" }}>
-          <div className="icon-btn" onClick={() => setSelJob(null)} style={{ width: 32, height: 32, borderRadius: 11, background: c.surface2, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18, cursor: "pointer" }}><ChevronLeft size={17} color={c.text} /></div>
+          <div className="icon-btn" onClick={() => setSelJob(null)} style={{ width: 32, height: 32, borderRadius: 11, background: c.surface2, display: "flex", alignItems: "center", justifyContent: "ce[...]
           <div style={{ fontSize: 17, fontWeight: 700, color: c.text }}>{j.title}</div>
           <div style={{ fontSize: 12, color: c.sub, margin: "4px 0 14px" }}>{j.business} · {j.remote ? "Remote" : j.city}</div>
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 16 }}>
@@ -553,8 +637,8 @@ export default function TrysApp() {
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 16 }}>{j.skills.map(s => <Badge key={s}>{s}</Badge>)}</div>
           <div style={{ fontSize: 16, fontWeight: 700, color: teal, marginBottom: 18 }}>{rupee(j.pay)} / month</div>
           <div style={{ display: "flex", gap: 9 }}>
-            <button className="pressable" onClick={() => toggleApply(j.id)} style={{ flex: 1, padding: 14, borderRadius: 14, border: "none", background: isApplied ? c.surface2 : grad, color: isApplied ? c.text : "#0A0A0C", fontWeight: 700, fontSize: 13, cursor: "pointer" }}>{isApplied ? "Applied ✓" : "One-click apply"}</button>
-            <button className="pressable icon-btn" onClick={() => toggleSave(j.id)} style={{ width: 48, borderRadius: 14, border: `1px solid ${c.border}`, background: isSaved ? c.surface2 : "transparent", cursor: "pointer" }}><Bookmark size={15} color={isSaved ? amber : c.sub} style={{ margin: "auto" }} /></button>
+            <button className="pressable" onClick={() => toggleApply(j.id)} style={{ flex: 1, padding: 14, borderRadius: 14, border: "none", background: isApplied ? c.surface2 : grad, color: isApplied[...]
+            <button className="pressable icon-btn" onClick={() => toggleSave(j.id)} style={{ width: 48, borderRadius: 14, border: `1px solid ${c.border}`, background: isSaved ? c.surface2 : "transpare[...]
           </div>
         </div>
       </div>
@@ -589,7 +673,7 @@ export default function TrysApp() {
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
               {view === "home" && <div style={{ fontSize: 11.5, color: c.sub, marginRight: 2 }}>Good evening, Maya</div>}
-              <div className="icon-btn" onClick={() => setDark(d => !d)} style={{ width: 32, height: 32, borderRadius: 11, background: c.surface2, border: `1px solid ${c.border}`, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", overflow: "hidden", flexShrink: 0 }}>
+              <div className="icon-btn" onClick={() => setDark(d => !d)} style={{ width: 32, height: 32, borderRadius: 11, background: c.surface2, border: `1px solid ${c.border}`, display: "flex", ali[...]
                 <div className="theme-icon" style={{ transform: dark ? "rotate(0deg)" : "rotate(180deg)" }}>
                   {dark ? <Moon size={15} color={c.text} /> : <Sun size={15} color={c.text} />}
                 </div>
@@ -609,7 +693,7 @@ export default function TrysApp() {
             <div style={{ width: 20, height: 3, borderRadius: 3, background: violet }} />
           </div>
           {TABS.map(({ id, label, icon: Icon }) => (
-            <div key={id} className="icon-btn" onClick={() => setView(id)} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, cursor: "pointer", paddingTop: 6 }}>
+            <div key={id} className="icon-btn" onClick={() => setView(id)} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, cursor: "pointer", paddingTop: 6 }}[...]
               <Icon size={18} color={view === id ? violet : c.sub} />
               <span style={{ fontSize: 9.5, color: view === id ? c.text : c.sub, fontWeight: view === id ? 600 : 400 }}>{label}</span>
             </div>
