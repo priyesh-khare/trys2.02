@@ -422,11 +422,15 @@ export default function TrysApp() {
 
   const MessagesScreen = () => {
     const convos = businesses.slice(0, 10);
+    if (!convos || convos.length === 0) return <div style={page}>No conversations</div>;
+    
+    const currentConvo = thread.open && convos[thread.i] ? convos[thread.i] : null;
     const bubbles = [
       { me: false, text: "Thanks for backing our campaign, it means a lot to the team." },
       { me: true, text: "Of course — following your roadmap closely. Next update soon?" },
       { me: false, text: "Dropping one this Friday with revenue numbers and hiring plans." },
     ];
+    
     return (
       <div style={page}>
         {/* Mobile-optimized header */}
@@ -455,7 +459,7 @@ export default function TrysApp() {
             textOverflow: "ellipsis",
             margin: 0
           }}>
-            {thread.open ? convos[thread.i].name : "Messages"}
+            {thread.open && currentConvo ? currentConvo.name : "Messages"}
           </h1>
         </div>
         
