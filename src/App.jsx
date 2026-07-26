@@ -1,0 +1,2 @@
+import TrysApp from './trys_mobile_app';
+export default function App(){return <TrysApp/>}
